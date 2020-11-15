@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/cf11153a50.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="col-8 mx-auto mt-md-5">
+
+   
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/img/logo.png" alt="logo"
+        /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><i class="fas fa-store"></i> Scegli</li>
+            <li class="nav-item">
+              <i class="far fa-question-circle"></i> Domande frequenti
+            </li>
+            <li class="nav-item"><i class="far fa-envelope"></i> Contatti</li>
+            <li class="nav-item">
+              <i class="fas fa-shopping-cart"></i> Carrello
+            </li>
+            <li class="nav-item"><i class="far fa-user"></i> Login</li>
+            <li class="nav-item">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Italiano
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Italiano</a>
+                <a class="dropdown-item" href="#">English</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="hero" class="hero-container hero-bg">
+      <div class="container col-sm-12 col-lg-8 pt-5 mx-auto">
+        <div class="hero__slogan">
+          <h2 class="hero__title">Noleggia sci e snowboard online</h2>
+          <h3 class="hero__subtitle">
+            Nei nostri negozi o nelle migliori località sciistiche d'Italia
+          </h3>
+          <h4 class="hero__promo">
+            <span>Risparmia fino</span>
+            <span>al -50%</span>
+          </h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="search__bar__container p-4 col-sm-12 col-lg-8 mx-auto">
+      <div class="row">
+        <div class="search__bar search__bar__location col-12 col-md-3">
+          <input
+            id="autocomplete"
+            class="input input__location"
+            type="text"
+            placeholder="seleziona un luogo"
+          />
+          <div class="search__bar__temp-res js-tempres pre-scrollable">
+            <!-- search temp results -->
+          </div>
+        </div>
+
+        <div class="search__bar search__bar__sport col-12 col-md-3">
+          <select class="input input__sport">
+            <option value="seleziona">Seleziona uno sport</option>
+            <option value="american-football">American football</option>
+            <option value="arrampicata-sportiva">Arrampicata sportiva</option>
+            <option value="atletica-leggera">Atletica leggera</option>
+            <option value="automobilismo-autocross">
+              Automobilismo (autocross)
+            </option>
+            <option value="automobilismo-rally">Automobilismo (rally)</option>
+            <option value="automobilismo-regolarità">
+              Automobilismo (regolarità)
+            </option>
+            <option value="automobilismo-slalom">Automobilismo (slalom)</option>
+            <option value="automobilismo-velocità">
+              Automobilismo (velocità)
+            </option>
+            <option value="badminton">Badminton</option>
+            <option value="baseball">Baseball</option>
+            <option value="biathlon">Biathlon</option>
+            <option value="biliardo-sportivo">Biliardo sportivo</option>
+            <option value="bob">Bob</option>
+            <option value="bocce-prove-non-veloci">
+              Bocce (prove non veloci)
+            </option>
+            <option value="bocce-prove-veloci">Bocce (prove veloci)</option>
+            <option value="bowling">Bowling</option>
+            <option value="bridge">Bridge</option>
+            <option value="caccia-sporting">Caccia (sporting)</option>
+            <option value="caccia-tiro-a-palla">Caccia (tiro a palla)</option>
+            <option value="caccia-tiro-di-campagna">
+              Caccia (tiro di campagna)
+            </option>
+            <option value="calcio">Calcio</option>
+            <option value="calcio-arbitro">Calcio (arbitro)</option>
+            <option value="canoa">Canoa</option>
+            <option value="canottaggio">Canottaggio</option>
+            <option value="canottaggio-timoniere">
+              Canottaggio (timoniere)
+            </option>
+            <option value="canottaggio-vogatore">Canottaggio (vogatore)</option>
+            <option value="canottaggio-sedile-fisso">
+              Canottaggio sedile fisso
+            </option>
+            <option value="ciclismo">Ciclismo</option>
+            <option value="ciclismo-bmx">Ciclismo (bmx)</option>
+            <option value="ciclismo-trial">Ciclismo (trial)</option>
+            <option value="cinofilia-senza-abbattimento">
+              Cinofilia senza abbattimento
+            </option>
+            <option value="combinata-nordica">Combinata nordica</option>
+            <option value="cricket">Cricket</option>
+            <option value="curling">Curling</option>
+            <option value="dama">Dama</option>
+            <option value="danza-sportiva">Danza sportiva</option>
+            <option value="flag-football">Flag football</option>
+            <option value="freestyle">Freestyle</option>
+            <option value="ginnastica">Ginnastica</option>
+            <option value="giochi-e-sport-tradizionali">
+              Giochi e sport tradizionali
+            </option>
+            <option value="golf">Golf</option>
+            <option value="handball">Handball</option>
+            <option value="handball-arbitro">Handball (arbitro)</option>
+            <option value="hockey-in-linea">Hockey in linea</option>
+            <option value="hockey-su-ghiaccio">Hockey su ghiaccio</option>
+            <option value="hockey-su-pista">Hockey su pista</option>
+            <option value="hockey-su-prato">Hockey su prato</option>
+            <option value="ippica">Ippica</option>
+            <option value="ju-jitsu">Ju jitsu</option>
+            <option value="judo">Judo</option>
+            <option value="karate">Karate</option>
+            <option value="karting">Karting</option>
+            <option value="kayak">Kayak</option>
+            <option value="kendo">Kendo</option>
+            <option value="kick-boxing-arbitro">Kick boxing (arbitro)</option>
+            <option value="kick-boxing-full-contact">
+              Kick boxing (full contact)
+            </option>
+            <option value="kick-boxing-light-contact">
+              Kick boxing (light contact)
+            </option>
+            <option value="kick-boxing-low-kick">Kick boxing (low kick)</option>
+            <option value="kick-boxing-semi-contact">
+              Kick boxing (semi contact)
+            </option>
+            <option value="lotta">Lotta</option>
+            <option value="motociclismo-enduro">Motociclismo (enduro)</option>
+            <option value="motociclismo-motocross">
+              Motociclismo (motocross)
+            </option>
+            <option value="motociclismo-speedway">
+              Motociclismo (speedway)
+            </option>
+            <option value="motociclismo-trial">Motociclismo (trial)</option>
+            <option value="motociclismo-velocità">
+              Motociclismo (velocità)
+            </option>
+            <option value="motonautica">Motonautica</option>
+            <option value="muay-thai">Muay thai</option>
+            <option value="nuoto">Nuoto</option>
+            <option value="nuoto-pinnato">Nuoto pinnato</option>
+            <option value="nuoto-salvamento">Nuoto salvamento</option>
+            <option value="nuoto-sincronizzato">Nuoto sincronizzato</option>
+            <option value="orientamento">Orientamento</option>
+            <option value="pallacanestro">Pallacanestro</option>
+            <option value="pallacanestro-arbitro">
+              Pallacanestro (arbitro)
+            </option>
+            <option value="pallacanestro-in-carrozzina">
+              Pallacanestro in carrozzina
+            </option>
+            <option value="pallanuoto">Pallanuoto</option>
+            <option value="pallapugno">Pallapugno</option>
+            <option value="pallavolo">Pallavolo</option>
+            <option value="paracadutismo">Paracadutismo</option>
+            <option value="pattinaggio-artistico">Pattinaggio artistico</option>
+            <option value="pattinaggio-corsa">Pattinaggio corsa</option>
+            <option value="pattinaggio-su-ghiaccio-figure">
+              Pattinaggio su ghiaccio figure
+            </option>
+            <option value="pattinaggio-su-ghiaccio-velocità">
+              Pattinaggio su ghiaccio velocità
+            </option>
+            <option value="pentathlon">Pentathlon</option>
+            <option value="pugilato">Pugilato</option>
+            <option value="rugby">Rugby</option>
+            <option value="rugby-arbitro">Rugby (arbitro)</option>
+            <option value="salto-dal-trampolino">Salto dal trampolino</option>
+            <option value="sanschou">Sanschou</option>
+            <option value="scacchi">Scacchi</option>
+            <option value="scherma">Scherma</option>
+            <option value="sci-alpinismo">Sci alpinismo</option>
+            <option value="sci-alpino-discesa-libera">
+              Sci alpino (discesa libera)
+            </option>
+            <option value="sci-alpino-slalom">Sci alpino (slalom)</option>
+            <option value="sci-carving">Sci carving</option>
+            <option value="sci-d’erba">Sci d’erba</option>
+            <option value="sci-di-fondo">Sci di fondo</option>
+            <option value="sci-nautico-figure-e-slalom">
+              Sci nautico figure e slalom
+            </option>
+            <option value="sci-nautico-piloti">Sci nautico piloti</option>
+            <option value="sci-nautico-salto">Sci nautico salto</option>
+            <option value="sci-nautico-velocità">Sci nautico velocità</option>
+            <option value="sci-nautico-wakeboard">Sci nautico wakeboard</option>
+            <option value="sci-velocità">Sci velocità</option>
+            <option value="shoot-boxe">Shoot boxe</option>
+            <option value="skateboard">Skateboard</option>
+            <option value="skeleton">Skeleton</option>
+            <option value="skiroll">Skiroll</option>
+            <option value="slittino-pista-artificiale">
+              Slittino pista artificiale
+            </option>
+            <option value="slittino-pista-naturale">
+              Slittino pista naturale
+            </option>
+            <option value="snowboard">Snowboard</option>
+            <option value="softball">Softball</option>
+            <option value="sollevamento-pesi">Sollevamento pesi</option>
+            <option value="sport-equestri">Sport equestri</option>
+            <option value="sport-subacquei-apnea">Sport subacquei apnea</option>
+            <option value="sport-subacquei-caccia-in-apnea">
+              Sport subacquei caccia in apnea
+            </option>
+            <option value="sport-subacquei-con-respiratore">
+              Sport subacquei con respiratore
+            </option>
+            <option value="sport-subacquei-hockey-sub">
+              Sport subacquei hockey sub
+            </option>
+            <option value="sport-subacquei-orientamento">
+              Sport subacquei orientamento
+            </option>
+            <option value="sport-subacquei-pesca-in-apnea">
+              Sport subacquei pesca in apnea
+            </option>
+            <option value="sport-subacquei-rugby-sub">
+              Sport subacquei rugby sub
+            </option>
+            <option value="sport-subacquei-tiro-al-bersaglio">
+              Sport subacquei tiro al bersaglio
+            </option>
+            <option value="squash">Squash</option>
+            <option value="sumo">Sumo</option>
+            <option value="surf">Surf</option>
+            <option value="taekwon-do">Taekwon-do</option>
+            <option value="tamburello">Tamburello</option>
+            <option value="tennis">Tennis</option>
+            <option value="tennis-tavolo">Tennis tavolo</option>
+            <option value="thai-boxing">Thai boxing</option>
+            <option value="tiro-a-segno">Tiro a segno</option>
+            <option value="tiro-a-segno-aria-compressa">
+              Tiro a segno (aria compressa)
+            </option>
+            <option value="tiro-a-volo">Tiro a volo</option>
+            <option value="tiro-alla-fune">Tiro alla fune</option>
+            <option value="tiro-con-l’arco">Tiro con l’arco</option>
+            <option value="trampolino-elastico">Trampolino elastico</option>
+            <option value="triathlon">Triathlon</option>
+            <option value="tuffi">Tuffi</option>
+            <option value="twirling">Twirling</option>
+            <option value="vela">Vela</option>
+            <option value="wushu-kung-fu-tajiciquan">
+              Wushu kung fu tajiciquan
+            </option>
+            <option value="wushu-kung-fu-taolu">Wushu kung fu taolu</option>
+          </select>
+        </div>
+
+        <div class="search__bar search__bar__daterange col-12 col-md-3">
+          <input class="input input__daterange" type="text" />
+        </div>
+
+        <div class="search__bar search__bar__button col-12 col-md-3">
+          <button class="input input__submit">
+            Cerca <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services__box contaienr col-sm-12 col-lg-8 mx-auto">
+      <div class="row">
+        <div class="services__box__service service__first col-sm-12 col-md-4">
+          <div class="card h-100 p-4 text-center">
+            <i class="fas fa-trophy"></i>
+            <h3>Multi-sport</h3>
+            <p>
+              Non solo sci, nel nostro catalogo puoi noleggiare attrezzatura per
+              praticare tanti sport (sci, snowboard, sci freeride, sci
+              alpinismo, sci di fondo, slittini, bici, SUP, Kayak, monopattini,
+              tennis).
+            </p>
+          </div>
+        </div>
+        <div class="services__box__service service__secondcol-sm-12 col-md-4">
+          <div class="card h-100 p-4 text-center">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Capillarità</h3>
+            <p>
+              Presso i nostri negozi Decathlon, vicino a te in città o dai
+              nostri PARTNER, nelle migliori località turistiche d'Italia sia al
+              mare che in montagna.
+            </p>
+          </div>
+        </div>
+        <div class="services__box__service service__third col-sm-12 col-md-4">
+          <div class="card h-100 p-4 text-center">
+            <i class="fas fa-coins"></i>
+            <h3>Miglior prezzo</h3>
+            <p>
+              Nei nostri negozi puoi ritirare il prodotto il giorno prima del
+              tuo noleggio dalle 17 e consegnarlo il giorno dopo entro le 14, al
+              miglior prezzo. Dai PARTNER sconti fino al -50% per chi prenota
+              online.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center col-8 mx-auto mt-5">
+      <span class="footer__info"
+        >created by
+        <a href="mailto:aliverti.luca@gmail.com">Luca Aliverti</a></span
+      >
+    </footer>
+
+    <!-- scripts -->
+
+    <script></script>
+    <script src="./assets/js/script.js"></script>
+    <script></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHmXAkNijtEsQYJlgKkrX6I4CILoePF70&libraries=places"
+    ></script>
+  </body>
+</html>
